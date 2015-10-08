@@ -26,6 +26,19 @@ tredje upplaga.  Skapa dessutom ett UML-klassdiagram för modellen.
 klasserna de attribut och operationer så som ni valde?
 
 \subsubsection*{Lösning}
+Figurerna beskrivs av ett visst antal punkter eller positioner som representeras
+av \texttt{Vertex2D}-instanser. Alla figurer består av minst ett
+\texttt{Vertex2D}-objekt som representerar figurens mittpunkt. Figurerna kan
+delas upp i två separata grenar i arvshierarkin, \texttt{Figure} och
+\texttt{SimpleFigure}.  Skillnaden mellan Figure och SimpleFigure är hur många
+punkter de lagrar för att beskriva figuren de representerar.  Figurer som kan
+beskrivas med bara en \texttt{Vertex2D}-instans, figurens position, ärver från
+\texttt{SimpleFigure}; punkt, cirkel och ellips.  Figurer som består av fler
+\texttt{Vertex2D}-objekt, ärver från \texttt{Figure}.  Klassen \texttt{Figure}
+lagrar sina punkter i en lista för enkel åtkomst.  Det möjliggör också
+skapandet av figurer med ett godtyckligt antal punkter.
+
+
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=\linewidth]{diagram/uppgift2-icons.eps}

@@ -21,6 +21,14 @@ skinparam backgroundColor transparent
 skinparam classBackgroundColor transparent
 'skinparam style strictuml
 
+header
+Jonas Sjöberg 860224
+Högskolan i Gävle
+""tel12jsg@student.hig.se""
+""https://github.com/jonasjberg""
+end header
+
+
 ' ____________________________________________________________________________
 ' ____ CLASS DEFINITIONS ______________________________________________________
 package se.hig.oodp.lab.model {

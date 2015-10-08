@@ -24,6 +24,14 @@ skinparam backgroundColor transparent
 skinparam classBackgroundColor transparent
 'skinparam style strictuml
 
+header
+Jonas Sjöberg 860224
+Högskolan i Gävle
+""tel12jsg@student.hig.se""
+""https://github.com/jonasjberg""
+end header
+
+
 ' ____________________________________________________________________________
 ' ____ CLASS DEFINITIONS ______________________________________________________
 package se.hig.oodp.lab.model {
@@ -40,130 +48,130 @@ package se.hig.oodp.lab.model {
         +scale(ref:Vertex2D, x_factor:double, y_factor:double):Vertex2D
         +toString():String
     }
-}
 
-package se.hig.oodp.lab.model.simplefigure {
-    abstract class SimpleFigure {
-        #position:Vertex2D
-        --
-        SimpleFigure(position:Vertex2D)
-        ..
-        +moveBy(dx:double, dy:double)
-        +getPosition():Vertex2D
+    package se.hig.oodp.lab.model.simplefigure {
+        abstract class SimpleFigure {
+            #position:Vertex2D
+            --
+            SimpleFigure(position:Vertex2D)
+            ..
+            +moveBy(dx:double, dy:double)
+            +getPosition():Vertex2D
+        }
+
+        class Point {
+            Point(position:Vertex2D)
+            ..
+            +toString():String
+        }
+
+        class Circle {
+            -radius:double
+            --
+            +Circle(position:Vertex2D, radius:double)
+            ..
+            +scale(factor:double)
+            +getRadius():double
+            +toString():String
+        }
+
+        class Ellipse {
+            -width:double
+            -height:double
+            --
+            +Ellipse(position:Vertex2D, radius:double)
+            ..
+            +scale(xFactor:double, yFactor:double)
+            +getWidth():double
+            +getHeight():double
+            +toString():String
+        }
     }
 
-    class Point {
-        Point(position:Vertex2D)
-        ..
-        +toString():String
-    }
+    package se.hig.oodp.lab.model.figure {
+        abstract class Figure {
+            +DEFAULT_X_COORD:double
+            +DEFAULT_Y_COORD:double
+            #center:Vertex2D
+            #vertices:ArrayList<Vertex2D>
+            --
+            +Figure(center:Vertex2D)
+            ..
+            -addVerticesToList(newVertices:Vertex2D...)
+            +rotate(angle:double)
+            {abstract} +scale(xFactor:double, yFactor:double)
+            +moveBy(dx:double, dy:double)
+            +getCenter():Vertex2D
+            +getVertex(n:int):Vertex2D
+        }
 
-    class Circle {
-        -radius:double
-        --
-        +Circle(position:Vertex2D, radius:double)
-        ..
-        +scale(factor:double)
-        +getRadius():double
-        +toString():String
-    }
+        class Line {
+            -v0:Vertex2D
+            -v1:Vertex2D
+            --
+            +Line(v0:Vertex2D, v1:Vertex2D)
+            ..
+            -updateCenterPoint()
+            +scale(xFactor:double, yFactor:double)
+            +toString():String
+        }
 
-    class Ellipse {
-        -width:double
-        -height:double
-        --
-        +Ellipse(position:Vertex2D, radius:double)
-        ..
-        +scale(xFactor:double, yFactor:double)
-        +getWidth():double
-        +getHeight():double
-        +toString():String
-    }
-}
+        class Triangle {
+            -v0:Vertex2D
+            -v1:Vertex2D
+            -v2:Vertex2D
+            -width:double
+            -height:double
+            --
+            +Triangle(center:Vertex2D, width:double, height:double)
+            +Triangle(v0:Vertex2D, v1:Vertex2D, v2:Vertex2D)
+            ..
+            -calculateVerticesFromCenter()
+            -updateCenterPoint()
+            +scale(xFactor:double, yFactor:double)
+            +toString():String
+        }
 
-package se.hig.oodp.lab.model.figure {
-    abstract class Figure {
-        +DEFAULT_X_COORD:double
-        +DEFAULT_Y_COORD:double
-        #center:Vertex2D
-        #vertices:ArrayList<Vertex2D>
-        --
-        +Figure(center:Vertex2D)
-        ..
-        -addVerticesToList(newVertices:Vertex2D...)
-        +rotate(angle:double)
-        {abstract} +scale(xFactor:double, yFactor:double)
-        +moveBy(dx:double, dy:double)
-        +getCenter():Vertex2D
-        +getVertex(n:int):Vertex2D
-    }
+        class Rectangle {
+            -v0:Vertex2D
+            -v1:Vertex2D
+            -v3:Vertex2D
+            -v3:Vertex2D
+            -width:double
+            -height:double
+            --
+            +Rectangle(center:Vertex2D, width:double, height:double)
+            +Rectangle(v0:Vertex2D, v1:Vertex2D, v2:Vertex2D, v3:Vertex2D)
+            ..
+            -calculateVerticesFromCenter()
+            -updateCenterPoint()
+            -calculateWidth()
+            -calculateHeight()
+            +scale(xFactor:double, yFactor:double)
+            +toString():String
+        }
 
-    class Line {
-        -v0:Vertex2D
-        -v1:Vertex2D
-        --
-        +Line(v0:Vertex2D, v1:Vertex2D)
-        ..
-        -updateCenterPoint()
-        +scale(xFactor:double, yFactor:double)
-        +toString():String
-    }
-
-    class Triangle {
-        -v0:Vertex2D
-        -v1:Vertex2D
-        -v2:Vertex2D
-        -width:double
-        -height:double
-        --
-        +Triangle(center:Vertex2D, width:double, height:double)
-        +Triangle(v0:Vertex2D, v1:Vertex2D, v2:Vertex2D)
-        ..
-        -calculateVerticesFromCenter()
-        -updateCenterPoint()
-        +scale(xFactor:double, yFactor:double)
-        +toString():String
-    }
-
-    class Rectangle {
-        -v0:Vertex2D
-        -v1:Vertex2D
-        -v3:Vertex2D
-        -v3:Vertex2D
-        -width:double
-        -height:double
-        --
-        +Rectangle(center:Vertex2D, width:double, height:double)
-        +Rectangle(v0:Vertex2D, v1:Vertex2D, v2:Vertex2D, v3:Vertex2D)
-        ..
-        -calculateVerticesFromCenter()
-        -updateCenterPoint()
-        -calculateWidth()
-        -calculateHeight()
-        +scale(xFactor:double, yFactor:double)
-        +toString():String
-    }
-
-    class Square {
-        -v0:Vertex2D
-        -v1:Vertex2D
-        -v3:Vertex2D
-        -v3:Vertex2D
-        -sideLength:double
-        --
-        +Square(center:Vertex2D, side:double)
-        ..
-        -updateCenterPoint()
-        +scale(xFactor:double, yFactor:double)
-        +toString():String
+        class Square {
+            -v0:Vertex2D
+            -v1:Vertex2D
+            -v3:Vertex2D
+            -v3:Vertex2D
+            -sideLength:double
+            --
+            +Square(center:Vertex2D, side:double)
+            ..
+            -updateCenterPoint()
+            +scale(xFactor:double, yFactor:double)
+            +toString():String
+        }
     }
 }
 
 
 ' ____________________________________________________________________________
 ' ____ PACKAGE HIERARCHY _____________________________________________________
-se.hig.oodp.lab.model +-- se.hig.oodp.lab.model.figure
-se.hig.oodp.lab.model +-- se.hig.oodp.lab.model.simplefigure
+' se.hig.oodp.lab.model +-- se.hig.oodp.lab.model.figure
+' se.hig.oodp.lab.model +-- se.hig.oodp.lab.model.simplefigure
 
 
 ' ____________________________________________________________________________

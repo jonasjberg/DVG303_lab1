@@ -18,6 +18,11 @@ skinparam packageStyle folder
 ' don't use symbols to indicate visibility
 ' skinparam classAttributeIconsize 0
 
+' appearance
+skinparam monochrome true
+skinparam backgroundColor transparent
+skinparam classBackgroundColor transparent
+'skinparam style strictuml
 
 ' ____________________________________________________________________________
 ' ____ CLASS DEFINITIONS ______________________________________________________

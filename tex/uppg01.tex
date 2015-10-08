@@ -38,13 +38,15 @@ beskrivas med bara en \texttt{Vertex2D}-instans, figurens position, ärver från
 lagrar sina punkter i en lista för enkel åtkomst.  Det möjliggör också
 skapandet av figurer med ett godtyckligt antal punkter.
 
-
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=\linewidth]{diagram/uppgift2-icons.eps}
-\caption{Uppgift~\ref{sec:uppg1a}: UML-diagram för geometriska figurer}
+\includegraphics[width=\linewidth]{diagram/uppgift1.eps}
+\caption{Uppgift~\ref{sec:uppg1a}: UML-diagram för geometriska figurer
+(\texttt{diagram/uppgift1.eps})}
 \label{fig:uppg1a}
 \end{figure}
+
+\par UML-klassdiagrammet återfinns i Figur~\ref{fig:uppg1a}, samt bifogad fil.
 
 
 \subsection{}\label{uppg1b}
@@ -54,7 +56,7 @@ att testa koden!
 
 \subsubsection*{Lösning}
 Se bifogad källkod, klasserna finns i paketen
-\texttt{se.hig.oodp.lab.model.simplefigure} och
+\texttt{se.hig.oodp.lab.model.simplefigure} \\ och 
 \texttt{se.hig.oodp.lab.model.figure}.
 
 
@@ -69,26 +71,5 @@ instanser av Vertex2D och instanser av figurklasserna? På vilket sätt
 Klassen \texttt{Vertex2D} är en del av figurklasserna. Figurklasserna består
 av minst en \texttt{Vertex2D} som utgör figurens mittpunkt. Figurklasserna
 har en varsin lista där ett godtyckligt antal \texttt{Vertex2D}-objekt kan
-lagras, beroende på vilken figurklass det handlar om.
-
-
-%\subsubsubsection{Movable.java}
-%\javacode{src/se/hig/oodp/lab/model/component/Movable.java}
-%\caption{Interfacet Movable}
-%\label{src:movable}
-
-% Se bifogad källkod.
-
-
-%% Screenshots med Bash, terminalfönsterstorlek 90x40
-%\subsection{Skärmdump}
-%Se Figur~\ref{fig:uppg01-screenshot} för skärmdump på körning av koden i
-%Sektion~\ref{src:uppg01} och Sektion~\ref{src:userinputfilter}.
-%
-%\begin{figure}[htbp]
-%\centering
-%\includegraphics[width=\linewidth]{img/01.png}
-%\caption{Körning av koden till Uppgift~\ref{sec:uppg01}}
-%\label{fig:uppg01-screenshot}
-%\end{figure}
+lagras, antalet beror på vilken figur subklassen representerar.
 

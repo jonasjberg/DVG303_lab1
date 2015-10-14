@@ -13,25 +13,52 @@
 %           International.  See LICENSE.md for full licensing information.
 % ==============================================================================
 
-\section{Introduktion}\label{sec:intro}
+\section*{Introduktion}\label{sec:intro}
+\addcontentsline{toc}{section}{Introduktion}
 
-\subsection{}\label{sec:uppg1a}
-\subsubsection*{Övergripande beskrivning}
+\subsection*{Övergripande beskrivning}\label{sec:beskrivning}
+\addcontentsline{toc}{subsection}{Övergripande beskrivning}
 Det här är den första av tre laborationer i objektorienterad design och
-programmering. Under laborationerna kommer programvara att utvecklas från en
-specifikation. 
-% TODO: Syfte (modern mjukvaruutveckling, revisionskontroll, dokumentation ..)
+programmering. Ett fullständigt program kommer att utvecklas under
+laborationerna. Processen kommer att innehålla många element av professionell
+mjukvaruutveckling; design, dokumentation, revisionskontroll, etc., och syftar
+till att utveckla praktiska färdigheter i mjukvaruutveckling.
 
-\subsubsection*{Specifikation}
-Efterfrågad funktionalitet för programmet beskrivs enligt UML-standard i 
+\subsection*{Specifikation}
+\addcontentsline{toc}{subsection}{Specifikation}
+Efterfrågad funktionalitet för programmet beskrivs enligt UML-standard i
 Figur~\ref{fig:usecase}.
 
 \begin{figure}[htbp]
-\centering
-\includegraphics[width=\linewidth]{diagram/usecase.eps}
-\caption{Användningsfallsdiagram \emph{("use case diagram")}}
-\label{fig:usecase}
+    \centering
+    \includegraphics[width=\linewidth]{diagram/usecase.eps}
+    \caption{Användningsfallsdiagram (\texttt{diagram/usecase.eps})}}
+    \label{fig:usecase}
 \end{figure}
 
 
+\subsection*{Arbetsmetod}
+\addcontentsline{toc}{subsection}{Arbetsmetod}
+\begin{itemize}
+    \item Koden skrivs i utvecklingsmiljön \texttt{Intellij IDEA} under
+    \texttt{Linux 3.19.0-28-generic} och kompileras samt exekveras med följande
+    \texttt{Java}-version:
+    \begin{verbatim}
+    > $ java -version
+    java version "1.7.0_79"
+    OpenJDK Runtime Environment (IcedTea 2.5.6) (7u79-2.5.6-0ubuntu1.15.04.1)
+    OpenJDK Server VM (build 24.79-b02, mixed mode)
+    \end{verbatim}
 
+    \item Rapporten skrivs i \latex med texteditorn \texttt{Vim} och kompileras
+    till pdf med \texttt{latexmk}.
+    \par Diagram och figurer skapas av \texttt{PlantUML} och renderas med
+    \texttt{Graphviz}.
+
+    \item För revisionskontroll används \texttt{Git}.
+\end{itemize}
+
+\subsection*{Källor}
+\addcontentsline{toc}{subsection}{Källor}
+% TODO: Lägg till URL till specifikt repo ..
+\par Källkod till programmet och rapporten finns att hämta på \url{https://github.com/jonasjberg}.

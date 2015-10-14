@@ -31,24 +31,60 @@ Högskolan i Gävle
 ""https://github.com/jonasjberg""
 end header
 
+title Användningsfallsdiagram\n("Use case diagram")
+
 ' ______________________________________________________________________________
 ' ____ USECASE DIAGRAM _________________________________________________________
-:Main Admin: as Admin
-(Use the application) as (Use)
+'
+' * AF 1: Skapa figur.
+'         Användaren väljer ’skapa figur’ och sedan vilken typ figuren ska ha.
+'         Möjliga värden är: Punkt, linje, triangel, rektangel, cirkel och
+'         kanske ellips och kvadrat.  Systemet ger användaren möjlighet att
+'         mata in värden som behövs för att definiera den önskade figuren.
+'         Systemet använder sedan värden för att skapa ett objekt av vald typ
+'         och tilldelar objektet till passande objektlista (t.ex. figur-lista,
+'         lista med flyttbara figurer, lista med roterbara figurer mm. - se
+'         nedan).
+' * AF 2: Ta bort alla figurer.
+'         Användaren väljer ’Ta bort allt’. 
+'         Systemet tömmer alla listor.
+' * AF 3: Rita ut alla figurer.
+'         Användaren väljer ’Rita ut allt’. 
+'         Systemet visar alla figurer som kan ritas.  
+'         Obs: Detta användningsfall kommer att behandlas först i laboration 3.
+' * AF 4: Skriv ut data till alla figurer.
+'         Användaren väljer ’Skriv ut allt’. 
+'         Systemet skriver ut data till alla figurer på konsollen.
+' * AF 5: Förflytta alla flyttbara figurer.
+'         Användaren väljer ’Förflytta allt’. 
+'         Systemet ger användaren möjlighet att mata in värden dx, dy. 
+'         Systemet förflyttar alla figurer som kan förflyttas.
+' * AF 6: Ändra storlek till alla skalerbara figurer.
+'         Användaren väljer ’Ändra storlek till alla’. 
+'         Systemet ger användaren möjlighet att mata in värden sx, sy. 
+'         Systemet ändrar storleken till alla figurer som tillåter detta.
+' * AF 7: Rotera alla roterbara figurer.
+'         Användaren väljer ’Rotera alla’. 
+'         Systemet ger användaren möjlighet att mata in ett vinkel-värde. 
+'         Systemet roterar alla figurer som kan roteras.
 
-User -> (Start)
-User --> (Use)
+:Användare: as User
 
-Admin ---> (Use)
+rectangle "Figurprogrammet" {
+(Skapa figur) as (CreateFigure)
+(Ta bort alla figurer) as (RemoveAllFigures)
+(Rita ut alla figurer) as (DrawAllFigures)
+(Skriv ut data till alla figurer) as (PrintDataAllFigures)
+(Förflytta alla flyttbara figurer) as (MoveAllMovable)
+(Ändra storlek till alla skalerbara figurer) as (ScaleAllScalable)
+(Rotera alla roterbara figurer) as (RotateAllRotatable)
 
-note right of Admin : This is an example.
-
-note right of (Use)
-A note can also
-be on several lines
-end note
-
-note "This note is connected\nto several objects." as N2
-(Start) .. N2
-N2 .. (Use)
+User --> CreateFigure
+User --> RemoveAllFigures
+User --> DrawAllFigures
+User --> PrintDataAllFigures
+User --> MoveAllMovable
+User --> ScaleAllScalable
+User --> RotateAllRotatable
+}
 @enduml

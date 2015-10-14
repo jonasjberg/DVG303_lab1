@@ -1,0 +1,54 @@
+' DVG303 :: Objektorienterad design och programmering
+' 860224 Jonas Sjöberg
+' Högskolan i Gävle
+' tel12jsg@student.hig.se
+'
+' Lab #1
+
+
+@startuml
+' ______________________________________________________________________________
+' ____ CONFIGURATION OPTIONS ___________________________________________________
+' debug flag creates a 'svek.dot' and 'svek.svg' file in ~/
+!pragma svek_trace on
+
+' package graphical style
+skinparam packageStyle folder
+
+' don't use symbols to indicate visibility
+' skinparam classAttributeIconsize 0
+
+' appearance
+skinparam monochrome true
+'skinparam backgroundColor transparent
+skinparam classBackgroundColor transparent
+'skinparam style strictuml
+
+header
+Jonas Sjöberg 860224
+Högskolan i Gävle
+""tel12jsg@student.hig.se""
+""https://github.com/jonasjberg""
+end header
+
+' ______________________________________________________________________________
+' ____ USECASE DIAGRAM _________________________________________________________
+:Main Admin: as Admin
+(Use the application) as (Use)
+
+User -> (Start)
+User --> (Use)
+
+Admin ---> (Use)
+
+note right of Admin : This is an example.
+
+note right of (Use)
+A note can also
+be on several lines
+end note
+
+note "This note is connected\nto several objects." as N2
+(Start) .. N2
+N2 .. (Use)
+@enduml

@@ -1,6 +1,6 @@
 
                            DVG303
-         Objektorienterad design och programmering
+         Objektorienterad Design och Programmering
                      Högskolan i Gävle
 
                        Laboration #1

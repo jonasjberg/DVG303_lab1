@@ -1,5 +1,4 @@
 % ==============================================================================
-%
 %                                    DVG303
 %                  Objektorienterad design och programmering
 %                                Laboration #1
@@ -35,7 +34,7 @@ t.ex. cirkeln. Det kan vara konceptuellt möjligt att rotera en perfekt cirkel,
 men i det här fallet så skulle cirkelns interna läge inte förändras, och
 den grafiska representationen skulle inte heller komma att ändras.
 Alternativet till ett interface \texttt{Rotatable} i fallet med cirkeln är att
-\texttt{rotate()}-metoden i cirkel-klassen blir ersatt med en tom metod genom 
+\texttt{rotate()}-metoden i cirkel-klassen blir ersatt med en tom metod genom
 \emph{override}.
 
 
@@ -49,7 +48,7 @@ implementera interfacet ifall det passar!
 Jag bestämde mig för att lägga till interfacen \texttt{Movable},
 \texttt{Rotatable} och \texttt{Scalable}. Detta med motiveringen att det
 är operationer som efterfrågas i användningsfallsdiagrammet och som de olika
-figurerna kan komma att behöva utföra på olika vis, beroende på figur. 
+figurerna kan komma att behöva utföra på olika vis, beroende på figur.
 Avvägning gjordes mot att göra en enklare design som förlitar sig mer på arv
 och \emph{override} av superklassers metoder. Det uppdaterade klassdiagrammet
 återfinns i Figur~\ref{fig:uppg3b}.
@@ -72,5 +71,3 @@ Uppdatera koden från uppgift 2 så att det motsvarar den utökade modellen frå
 
 \subsubsection*{Lösning}
 Se bifogad kod för implementering.
-
-

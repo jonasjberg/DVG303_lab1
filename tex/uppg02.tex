@@ -1,5 +1,4 @@
 % ==============================================================================
-%
 %                                    DVG303
 %                  Objektorienterad design och programmering
 %                                Laboration #1
@@ -20,10 +19,10 @@
 \subsection{}\label{sec:uppg2a}
 \subsubsection*{Frågeställning}
 En superklass kan innehålla attribut och operationer som är gemensamma
-för ett antal klasser.  Beskriv en superklass till klasserna ni skapade i 
-uppgift 1! Beskrivningen ska innehålla information om vilka attribut det ska 
-finnas i superklassen och vilka meddelanden (kommandon och frågor) man kan 
-skicka till instanser av superklasstypen.  Förklara varför ni bestämde er 
+för ett antal klasser.  Beskriv en superklass till klasserna ni skapade i
+uppgift 1! Beskrivningen ska innehålla information om vilka attribut det ska
+finnas i superklassen och vilka meddelanden (kommandon och frågor) man kan
+skicka till instanser av superklasstypen.  Förklara varför ni bestämde er
 för just den uppsättning attribut/operationer som ni valde!
 
 
@@ -51,8 +50,8 @@ Klasserna \texttt{SimpleFigure} och \texttt{Figure} är både abstrakta av den
 anledningen att vi sannolikt inte kommer att behöva instantiera någon odefinerad
 figur. Möjligheten att skapa t.ex. en polygon med ett godtyckligt antal punkter
 från figurklasserna talar emot att de är abstrakta, det skulle vara möjligt att
-skapa odefinerade figur-objekt och efter att de skapats namnge dem till 
-rätt figur (punkt, kvadrat, triangel, etc..) efter det antal punkter figuren 
+skapa odefinerade figur-objekt och efter att de skapats namnge dem till
+rätt figur (punkt, kvadrat, triangel, etc..) efter det antal punkter figuren
 instantierats med och dessa punkters position.
 I det här fallet valde jag ändå att göra figurklasserna abstrakta och låta
 subklasserna punkt, kvadrat, triangel, etc.. ärva från superklasserna och

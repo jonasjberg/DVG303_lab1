@@ -1,5 +1,4 @@
 % ==============================================================================
-%
 %                                    DVG303
 %                  Objektorienterad design och programmering
 %                                Laboration #1
@@ -23,15 +22,15 @@
 \subsubsection*{Frågeställning}
 Modellera klasserna som representerar konkreta geometriska figurer som ska
 kunna hanteras i programmet och därför ska ingå i programmets datamodell:
-Punkt, linje, triangel, cirkel, rektangel. 
-\par Beskriv klasserna på ett liknande sätt som i kursboken, kap 2.2, på sida 65 -
-tredje upplaga.  Skapa dessutom ett UML-klassdiagram för modellen.
+Punkt, linje, triangel, cirkel, rektangel.
+\par Beskriv klasserna på ett liknande sätt som i kursboken, kap 2.2, på sida
+65 - tredje upplaga.  Skapa dessutom ett UML-klassdiagram för modellen.
 \par Motivera era beslut: Varför skapade ni modellen som den är? Varför har
 klasserna de attribut och operationer så som ni valde?
 
 \subsubsection*{Lösning}
-Figurerna beskrivs av ett visst antal punkter eller positioner som representeras
-av \texttt{Vertex2D}-instanser. Alla figurer består av minst ett
+Figurerna beskrivs av ett visst antal punkter eller positioner som
+representeras av \texttt{Vertex2D}-instanser. Alla figurer består av minst ett
 \texttt{Vertex2D}-objekt som representerar figurens mittpunkt. Figurerna kan
 delas upp i två separata grenar i arvshierarkin, \texttt{Figure} och
 \texttt{SimpleFigure}.  Skillnaden mellan Figure och SimpleFigure är hur många
@@ -60,7 +59,7 @@ att testa koden!
 
 \subsubsection*{Lösning}
 Se bifogad källkod, klasserna finns i paketen
-\texttt{se.hig.oodp.lab.model.simplefigure} \\ och 
+\texttt{se.hig.oodp.lab.model.simplefigure} \\ och
 \texttt{se.hig.oodp.lab.model.figure}.
 
 
@@ -68,7 +67,7 @@ Se bifogad källkod, klasserna finns i paketen
 \subsection{}\label{sec:uppg1c}
 \subsubsection*{Frågeställning}
 Vilken relation ser ni mellan klassen Vertex2D och figurklasserna resp. mellan
-instanser av Vertex2D och instanser av figurklasserna? På vilket sätt 
+instanser av Vertex2D och instanser av figurklasserna? På vilket sätt
 återspeglas relationen i klassdiagrammet? Ge en förklaring!
 
 \subsubsection*{Lösning}
@@ -76,4 +75,3 @@ Klassen \texttt{Vertex2D} är en del av figurklasserna. Figurklasserna består
 av minst en \texttt{Vertex2D} som utgör figurens mittpunkt. Figurklasserna
 har en varsin lista där ett godtyckligt antal \texttt{Vertex2D}-objekt kan
 lagras, antalet beror på vilken figur subklassen representerar.
-

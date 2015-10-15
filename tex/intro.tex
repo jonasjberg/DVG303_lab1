@@ -26,7 +26,7 @@ till att utveckla praktiska färdigheter i mjukvaruutveckling.
 \subsection*{Specifikation}
 \addcontentsline{toc}{subsection}{Specifikation}
 Den funktionalitet som efterfrågas beskrivs enligt UML-standardiserat
-\emph{"use case diagram"} i Figur~\ref{fig:usecase}.
+användningsfallsdiagram (\emph{``use case diagram''}) i Figur~\ref{fig:usecase}.
 
 \begin{figure}[htbp]
 \centering
@@ -50,13 +50,26 @@ Den funktionalitet som efterfrågas beskrivs enligt UML-standardiserat
 
     \item Rapporten skrivs i \latex med texteditorn \texttt{Vim} och kompileras
     till pdf med \texttt{latexmk}.
-    \par Diagram och figurer skapas av \texttt{PlantUML} och renderas med
-    \texttt{Graphviz}.
+    \par Diagram och figurer skrivs i \texttt{PlantUML}-format och renderas med
+    \texttt{Graphviz}. Resultatet förhandsgranskas i realtid med hjälp av
+    plugins i \texttt{Intellij IDEA}.
 
-    \item För revisionskontroll används \texttt{Git}.
+    \item För revisionskontroll används \texttt{Git}. 
 \end{itemize}
 
-\subsection*{Källor}
+UML-diagram och dokumentation uppdateras löpande parallellt med källkoden.
+Förändringar i källkoden har kommit att följa uppdaterade diagram likväl som
+diagrammen har behövt uppdateras för att reflektera förändrad källkod eller
+funktionalitet.
+\par Varje uppgift finns representerad som en separat utvecklingsgren
+(\emph{branch}) i \texttt{Git}. På så vis kan varje uppgift utvecklas oberoende
+utan redundans och filduplicering. Det är också mycket enkelt att propagera
+förändringar mellan grenar och individuella \emph{commits} med hjälp av
+ändamålsriktiga ``diff''-verktyg. Ett sådant ingår i standarddistributioner av 
+\texttt{Git}, ett annant exempel är \texttt{Meld}.
+
+
+\subsection*{Källkod}
 \addcontentsline{toc}{subsection}{Källor}
 % TODO: Lägg till URL till specifikt repo ..
 \par Källkod till programmet och rapporten finns att hämta på \url{https://github.com/jonasjberg}.

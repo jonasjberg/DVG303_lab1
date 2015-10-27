@@ -1,5 +1,4 @@
 % ==============================================================================
-%
 %                                    DVG303
 %                  Objektorienterad Design och Programmering
 %                                Laboration #1
@@ -37,42 +36,45 @@
 \usepackage{wrapfig}
 \usepackage{lscape}
 
-
-\usepackage[pdfusetitle,bookmarks=true,
- bookmarksnumbered=true,bookmarksopen=false,
- breaklinks=false,pdfborder={0 0 0},backref=false,
- colorlinks=false]{hyperref}
+\usepackage[pdfusetitle,
+            bookmarks=true,
+            bookmarksnumbered=true,
+            bookmarksopen=false,
+            breaklinks=false,
+            pdfborder={0 0 0},
+            backref=false,
+            colorlinks=false]{hyperref}
 
 \newmintedfile[javacode]{java}{
-%bgcolor=mintedbackground,
-%fontfamily=tt,
-fontsize=\footnotesize,
-linenos=true,
-numberblanklines=true,
-numbersep=12pt,
-numbersep=5pt,
-frame=lines,
-framesep=2mm,
-funcnamehighlighting=true,
-tabsize=4,
-obeytabs=false,
-mathescape=false
-samepage=false,
-showspaces=false,
-showtabs =false,
-texcl=false,
+    %bgcolor=mintedbackground,
+    %fontfamily=tt,
+    fontsize=\footnotesize,
+    linenos=true,
+    numberblanklines=true,
+    numbersep=12pt,
+    numbersep=5pt,
+    frame=lines,
+    framesep=2mm,
+    funcnamehighlighting=true,
+    tabsize=4,
+    obeytabs=false,
+    mathescape=false
+    samepage=false,
+    showspaces=false,
+    showtabs =false,
+    texcl=false,
 }
 
 %\renewcommand{\thesubsection}{(\alph{subsection})}
 
 \title{DVG303 \\ Objektorienterad design och programmering \\ Laboration 1}
 
-\author{\\
-  Jonas Sjöberg\\
-  860224\\
-  Högskolan i Gävle\\
-  \texttt{tel12jsg@tudent.hig.se}\\
-  \texttt{https://github.com/jonasjberg}\\
+\author{                                   \\
+    Jonas Sjöberg                          \\
+    860224                                 \\
+    Högskolan i Gävle                      \\
+    \texttt{tel12jsg@tudent.hig.se}        \\
+    \texttt{https://github.com/jonasjberg} \\
 }
 
 
@@ -82,28 +84,28 @@ texcl=false,
     \maketitle
 
     \begin{center}
-    \begin{tabular}{l r}
-        Datum: & \isodate \today \par \\
-        Kursansvarig lärare: & Peter Jenke
-    \end{tabular}
+        \begin{tabular}{l r}
+            Datum:               & \isodate \today \par \\
+            Kursansvarig lärare: & Peter Jenke
+        \end{tabular}
     \end{center}
 
     \medskip
 
     \begin{abstract}
-    \begin{center}
-        Laborationsrapport för
-        \emph{DVG303 -- Objektorienterad design och programmering},
-        \\ Högskolan i Gävle, Höstterminen 2015.
-    \end{center}
+        \begin{center}
+            Laborationsrapport för
+            \emph{DVG303 -- Objektorienterad design och programmering},
+            \\ Högskolan i Gävle, Höstterminen 2015.
+        \end{center}
     \end{abstract}
 
     \newpage
     \setcounter{tocdepth}{3}
     \tableofcontents
     \listoffigures
-    \newpage
 
+    \newpage
     \input{tex/intro}
     \input{tex/uppg01}
     \input{tex/uppg02}
